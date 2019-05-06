@@ -112,3 +112,31 @@ for (let index = 0; index < inventory.length; index++) {
 }
 console.log(JSON.stringify(BMWAndAudi));
 
+//STRETCH - Using ES6 syntax
+console.log('-----STRETCH - Using ES6 syntax-----')
+// ==== Challenge 1 ====
+// get the car year car make and car model of the car id 33
+let foundCar = inventory.filter(car => car.id === 33);
+console.log(`Car 33 is a ${foundCar[0].car_year} ${foundCar[0].car_make} ${foundCar[0].car_model}`);
+
+// Challenge 3 
+// Return a sorted array of car carModels
+let carModelsES6 = inventory.map(item => item.car_model).sort()
+console.log(carModelsES6);
+
+//Challenge 4 
+// Return all car years
+let carYearsES6 = inventory.map(item => item.car_year)
+console.log(carYearsES6);
+
+// Challenge 5
+// Return a array of all cars older than the year 2000 then console.log the length
+let oldCarsES6 = inventory.filter(car => car.car_year < 2000);
+console.log(oldCarsES6.length); 
+
+
+// Challenge 6
+// Return all Audi all BMW cars in inventory
+let BMWAndAudiES6 = inventory.filter(car => car.car_make === 'BMW' || car.car_make === 'Audi' );
+console.log(JSON.stringify(BMWAndAudiES6))
+
